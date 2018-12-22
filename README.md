@@ -59,10 +59,11 @@ To get you started here are some basic objects and their properites
   "username": ""
   "password": "",
   "token": ""
+  "auth_method": "query_string"
 }
 ```
 
-Not every property is required. The token will always take precedence over the username and password when used to authenticate a request.
+Not every property is required. The token will always take precedence over the username and password when used to authenticate a request. The parameter auth_method is optional and if set to "query_string" the token is passed in http query string rather in authentication header.
 
 Some methods require two users, one of which is the auth user. This allows you to control what account is authenticating the request. The user object used to authenticate a request must provide either a token or a username and password.
 
